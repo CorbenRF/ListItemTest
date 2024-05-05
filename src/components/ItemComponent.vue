@@ -90,7 +90,7 @@ export default {
     background-color: transparent;
   }
   &__quantity {
-    width: 30px;
+    width: 2em;
     border: none;
     outline: none;
     background-color: transparent;

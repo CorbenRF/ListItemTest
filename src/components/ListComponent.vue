@@ -52,7 +52,6 @@ export default {
     item: {
       deep: true,
       handler(newVal) {
-        console.log(newVal);
         this.state = newVal.checked;
         this.checked = !!this.state;
       },

@@ -62,7 +62,6 @@ export default {
           }
         }
       }
-      console.log(squaresArr);
       return squaresArr.sort(() => 0.5 - Math.random());
     },
   },
