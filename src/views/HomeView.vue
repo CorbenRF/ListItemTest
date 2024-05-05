@@ -1,18 +1,36 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main">
+    <ListsScreen />
+    <OutputScreen />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import ListsScreen from '../components/ListsScreen.vue';
+import OutputScreen from '../components/OutputScreen.vue';
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld,
+  data() {
+    return {
+
+    };
   },
+  components: { ListsScreen, OutputScreen },
+
 };
+
 </script>
+
+<style lang="scss">
+* {
+  box-sizing: border-box;
+}
+.main {
+  min-height: 100vh;
+  padding: 2rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #000;
+}
+</style>
