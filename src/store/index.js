@@ -86,6 +86,15 @@ export default createStore({
         }
       }
     },
+    changeItemColor(state, payload) {
+      const list = state.lists.find((listTemp) => listTemp.id === payload.listId);
+      if (list) {
+        const item = list.itemList.find((itemTemp) => itemTemp.id === payload.itemId);
+        if (item) {
+          item.color = payload.color;
+        }
+      }
+    },
   },
   actions: {
     addItem({ commit }, payload) {
@@ -106,7 +115,9 @@ export default createStore({
     changeItemQuantity({ commit }, payload) {
       commit('changeItemQty', payload);
     },
-
+    changeItemColor({ commit }, payload) {
+      commit('changeItemColor', payload);
+    },
   },
   modules: {
   },

@@ -9,7 +9,7 @@
     </label>
     <div class="item__properties">
         <input type="number" min="0" class="item__quantity" v-model="this.quantity" @change="changeItemQuantity">
-        <input type="color" name="color" class="item__color" v-model="color">
+        <input type="color" name="color" class="item__color" v-model="color" @change="changeItemColor">
       </div>
   </div>
 </template>
@@ -42,6 +42,9 @@ export default {
         this.quantity = 0;
       }
       this.$store.dispatch('changeItemQuantity', { listId: this.listId, itemId: this.itemId, quantity: this.quantity });
+    },
+    changeItemColor() {
+      this.$store.dispatch('changeItemColor', { listId: this.listId, itemId: this.itemId, color: this.color });
     },
   },
   computed: {
